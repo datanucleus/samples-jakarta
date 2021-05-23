@@ -1,2 +1,4 @@
-# samples-jakarta
-Samples showing use of DataNucleus with Jakarta Persistence API 
+sample-jakarta
+==============
+
+Top-level project for all samples for DataNucleus Jakarta Persistence usage.

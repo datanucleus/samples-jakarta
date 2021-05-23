@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
+
+    <!-- Tutorial "unit" -->
+    <persistence-unit name="Tutorial">
+        <class>org.datanucleus.samples.jakarta.tutorial.Inventory</class>
+        <class>org.datanucleus.samples.jakarta.tutorial.Product</class>
+        <class>org.datanucleus.samples.jakarta.tutorial.Book</class>
+        <exclude-unlisted-classes/>
+
+        <properties>
+            <!-- ENABLE THESE FOR H2 -->
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:mem:nucleus1"/>
+            <property name="jakarta.persistence.jdbc.user" value="sa"/>
+            <property name="jakarta.persistence.jdbc.password" value=""/>
+
+            <!-- ENABLE THESE FOR HSQLDB -->
+            <!--property name="jakarta.persistence.jdbc.url" value="jdbc:hsqldb:mem:nucleus1"/>
+            <property name="jakarta.persistence.jdbc.user" value="sa"/>
+            <property name="jakarta.persistence.jdbc.password" value=""/-->
+
+            <!-- ENABLE THESE FOR MySQL/MariaDB -->
+            <!-- Change the "nucleus" to your database name, and the user/password -->
+            <!--property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1/nucleus?useServerPrepStmts=false"/>
+            <property name="jakarta.persistence.jdbc.user" value="mysql" />
+            <property name="jakarta.persistence.jdbc.password" value=""/-->
+
+            <!-- ENABLE THESE FOR ODF -->
+            <!-- Change the "tutorial.ods" to include the path to your ODF file -->
+            <!--property name="jakarta.persistence.jdbc.url" value="odf:file:tutorial.ods"/-->
+
+            <!-- ENABLE THESE FOR EXCEL -->
+            <!-- Change the "tutorial.xls" to include the path to your Excel file -->
+            <!--property name="jakarta.persistence.jdbc.url" value="excel:file:tutorial.xls"/-->
+
+            <!-- ENABLE THESE FOR MONGODB -->
+            <!--property name="jakarta.persistence.jdbc.url" value="mongodb:/nucleus1"/-->
+
+            <!-- ENABLE THESE FOR HBASE -->
+            <!--property name="jakarta.persistence.jdbc.url" value="hbase:"/-->
+
+            <!-- ENABLE THESE FOR NEO4J -->
+            <!-- Change the "testDB" to the path to your Neo4j graph DB file -->
+            <!--property name="jakarta.persistence.jdbc.url" value="neo4j:testDB"/-->
+
+            <!-- ENABLE THESE FOR CASSANDRA -->
+            <!--property name="jakarta.persistence.jdbc.url" value="cassandra:"/>
+            <property name="datanucleus.mapping.Schema" value="schema1"/-->
+
+            <property name="datanucleus.schema.autoCreateAll" value="true"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>
