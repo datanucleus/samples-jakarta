@@ -24,7 +24,7 @@ Maven Instructions
 Ant instructions
 ================
 1. Create a directory **lib** and add the following jars to it : 
-   jakarta.persistence-3.0.0.jar, datanucleus-core.jar, datanucleus-api-jakarta.jar, datanucleus-{store}.jar, log4j.jar, {your-database-driver}.jar
+   jakarta.persistence-3.0.0.jar, datanucleus-core.jar, datanucleus-api-jakarta.jar, datanucleus-{store}.jar, log4j.jar(s), {your-database-driver}.jar
 
 2. Run the command *ant clean compile enhance*. This builds everything and enhances the classes
 
